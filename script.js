@@ -23,11 +23,17 @@ const loadData = async () => {
     try {
         const res = await fetch("https://gdp-prd-clube.s3.amazonaws.com/api/repository/partners/all.json");
         shopItems = await res.json();
-        displayData(shopItems)
+        const sortedItems = shopItems.sort(function(a, b){
+            if(a.fantasyName < b.fantasyName) { return -1; }
+            if(a.fantasyName > b.fantasyName) { return 1; }
+            return 0;
+        })
+        displayData(sortedItems)
     } catch (err) {
         console.error(err);
     }
 };
+
 
 const displayData = (shops) => {
     const htmlString = shops
