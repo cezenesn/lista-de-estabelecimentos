@@ -37,6 +37,20 @@ label {
     justify-content: center;
 }
 
+@media (max-width: 350px)
+{
+    .shop {
+        width: 200px;
+    }
+}
+
+@media (min-width: 351px) and (max-width: 400px)
+{
+    .shop {
+        width: 250px;
+    }
+}
+
 .shop > img {
     border-radius: 5px;
     max-height: 100px;
