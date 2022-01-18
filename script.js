@@ -36,6 +36,7 @@ const displayData = (shops) => {
             <li class="shop">
                 <h2>${shop.fantasyName}</h2>
                 <p>Desconto: ${shop.discountAmount}%</p>
+                <img src="https://clube-static.clubegazetadopovo.com.br/${shop.logo}"></img>
             </li>
         `;
         })

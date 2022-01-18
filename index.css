@@ -29,10 +29,26 @@ label {
     padding: 10px 20px;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-template-areas:
+        'name image'
+        'house image';
+    text-align: left;
     align-items: center;
+    justify-content: center;
+}
+
+.shop > img {
+    border-radius: 5px;
+    max-height: 100px;
+    grid-area: image;
+    max-width: 100px;
+}
+
+.shop > p {
+    font-weight: 500;
+    grid-area: house;
+    margin: 0;
+    margin-top: -18px;
 }
 
 
